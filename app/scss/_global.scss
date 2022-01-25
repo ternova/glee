@@ -1,4 +1,5 @@
 body{
+  @extend %rubik-400;
   font-size: 14px;
   line-height: 32px;
   color: $default;
