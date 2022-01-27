@@ -21,7 +21,7 @@
   &__list-link{
     @extend %rubik-500;
     font-size: 15px;
-    color: $accent;
+    color: $accent-light;
   }
 }
 .user-nav{
@@ -36,7 +36,7 @@
   &__btn{
     padding: 15px;
     border-radius: 50%;
-    background-color: #a3bbc8;
+    background-color: $accent;
     margin-left: 20px;
   }
   &__box{
@@ -65,6 +65,80 @@
     line-height: 16px;
     color: $accent-dark;
     text-align: center;
+  }
+}
+.footer-top{
+  padding: 75px 0 60px;
+  border-bottom: 1px solid #dae4e9;
+  display: flex;
+  &__nav{
+    width: 225px;
+    margin-right: 100px;
+  }
+  &__logo{
+    margin-bottom: 25px;
+    display: block;
+  }
+  &__address,
+  &__phone,
+  &__link{
+    margin-bottom: 10px;
+    display: block;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #1f2044;
+    text-transform: uppercase;
+    margin: 10px 0 30px;
+  }
+  &__text{
+    margin-bottom: 25px;
+  }
+  &__form-input{
+    width: 170px;
+    background-color: $bg;
+    border: none;
+    padding: 12px 10px 12px 15px;
+    font-size: 12px;
+    &::placeholder{
+      @extend %dmsans-400;
+      font-size: 12px;
+      color: #234969;
+    }
+  }
+  &__form-btn{
+    border: none;
+    background-color: $accent;
+    color: #fff;
+    @extend %dmsans-400;
+    font-size: 14px;
+    padding: 10px 15px 12px;
+  }
+}
+.footer-bottom{
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__list{
+    display: flex;
+  }
+  &__list-item{
+    position: relative;
+  }
+  &__list-item + .footer-bottom__list-item{
+    padding-left: 30px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 15px;
+      background-color: $default;
+      top: 3px;
+      left: 14px;
+    }
   }
 }
 
