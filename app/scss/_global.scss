@@ -1,0 +1,56 @@
+html,
+body{
+  height: 100%;
+}
+body{
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $default;
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  flex-grow: 1;
+}
+.container__max{
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+a{
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $default;
+}
+.title{
+  text-align: center;
+  @extend %dmsans-700;
+  font-size: 36px;
+  color: $title;
+  margin-bottom: 30px;
+}
+.products-tabs,
+.design-tabs{
+  text-align: center;
+  margin-bottom: 75px;
+  &__btn{
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  .mixitup-control-active{
+    color: $title;
+  }
+}
