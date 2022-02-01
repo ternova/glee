@@ -36,3 +36,21 @@ a{
   color: $title;
   margin-bottom: 30px;
 }
+.products-tabs,
+.design-tabs{
+  text-align: center;
+  margin-bottom: 75px;
+  &__btn{
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  .mixitup-control-active{
+    color: $title;
+  }
+}

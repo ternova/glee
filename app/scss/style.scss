@@ -246,26 +246,8 @@
     color: #585858;
   }
 }
-
 .products{
   padding: 70px 0;
-  &__tabs{
-    text-align: center;
-    margin-bottom: 75px;
-  }
-  &__tabs-btn{
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    @extend %dmsans-700;
-    font-size: 16px;
-    color: #8b8b8b;
-    margin-left: 14px;
-    margin-right: 14px;
-  }
-  .mixitup-control-active{
-    color: $title;
-  }
   &__items{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -356,6 +338,9 @@
   &__content{
     width: 335px;
     margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   &__content-title{
     @extend %dmsans-700;
@@ -369,6 +354,7 @@
     margin-bottom: 20px;
   }
   &__content-btn{
+    width: 180px;
     display: inline-block;
     padding: 20px 80px 20px 16px;
     border: 1px solid #b3b7b5;
@@ -376,14 +362,47 @@
     @extend %rubik-500;
     font-size: 15px;
     color: $accent-light;
-
-  }
-  
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/products-arrow.svg);
+      width: 22px;
+      height: 9px;
+      top: 27px;
+      right: 18px;
+    }
+  } 
 }
-
-
-
-
+.design{
+  padding: 100px 0;
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px 30px;
+  }
+}
+.design-item{
+  max-width: 370px;
+  position: relative;
+  &__info{
+    width: 175px;
+    @extend %dmsans-700;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 20px;
+    color: $title;
+    margin-bottom: 10px;
+  }
+  &__subtitle{
+    font-size: 16px;
+    color: $accent;
+  }
+}
 .video-popup{
   padding: 185px 0;
   display: flex;
@@ -475,3 +494,5 @@
     align-items: center;
   }
 }
+
+@import 'media';
