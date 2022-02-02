@@ -425,7 +425,9 @@
   background-position: top center;
 }
 .blog{
-  padding-top: 110px;
+  &__inner{
+    padding-top: 110px;
+  }
   &__top{
     display: flex;
     justify-content: space-between;
@@ -560,6 +562,28 @@
     color: $accent-dark;
     margin-top: 20px;
     cursor: pointer;
+  }
+}
+.terms-conditions{
+  padding: 110px 0 60px;
+  &__item{
+    margin-bottom: 50px;
+    color: $accent-dark;
+  }
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+  }
+  &__list{
+    margin-left: 16px;
+  }
+  &__list-item + .terms-conditions__list-item{
+    margin-top: 25px;
   }
 }
 
