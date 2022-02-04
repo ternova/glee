@@ -80,3 +80,35 @@ a{
     color: inherit;
   }
 }
+.star{
+  padding: 0;
+  &__filter{
+    padding: 0;
+    margin: 10px 0;
+  }
+}
+.pagination{
+  padding-top: 105px;
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__list--two{
+    justify-content: start;
+  }
+  &__item + .pagination__item{
+    margin-left: 15px;
+  }
+  &__link{
+    display: inline-block;
+    font-size: 16px;
+    color: $accent-dark;
+    padding: 16px 20px;
+    border: 1px solid $accent;
+  }
+  &__link--active{
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
