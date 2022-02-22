@@ -11,8 +11,41 @@ $(function(){
   $('.product-detalis__num').styler();
 
   $('.related__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 2,
     prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="images/icons/arrow-left.svg" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-btn slick-next"><img src="images/icons/arrow-right.svg" alt=""></button>'
+    nextArrow: '<button type="button" class="slick-btn slick-next"><img src="images/icons/arrow-right.svg" alt=""></button>',
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 926,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 626,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 461,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+    ]
   });
 
   $('.product-tabs__top-item').on('click', function(e){
@@ -36,7 +69,15 @@ $(function(){
     asNavFor: '.product-slide__thumb',
     draggable: false,
     arrows: false,
-    fade: true
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 926,
+        settings: {
+          draggable: true
+        }
+      }
+    ]
   });
 
   $('.filter-price__input').ionRangeSlider({
