@@ -18,7 +18,7 @@
 
 @media (max-width: 1200px){
   .top-slider{
-    padding-top: 150px;
+    padding: 180px 0 70px;
     &__img{
       width: 55%;
       object-fit: contain;
@@ -36,21 +36,17 @@
       grid-gap: 30px;
     }
   }
-  .products-tabs,
-  .design-tabs{
-    margin-bottom: 50px;
-  }
   .products-box{
     padding-top: 0;
     &__item{
-      padding: 50px 15px;
+      padding: 70px 15px;
     }
     &__img{
       display: none;
     }
   }
   .video-popup{
-    padding: 115px 0;
+    padding: 135px 0;
   }
   .blog{
     &__items{
@@ -146,6 +142,9 @@
       z-index: 101;
       bottom: 50px;
       cursor: pointer;
+      img{
+        margin: 0 auto;
+      }
     }
   }
   .list-content{
@@ -153,7 +152,7 @@
   }
 }
 
-@media (max-width: 1120px){
+@media (max-width: 1170px){
   .about{
     &__inner{
       display: block;
@@ -166,6 +165,12 @@
     margin-left: 0;
     width: 100%;
     max-width: 100%;
+    &__item{
+      &:nth-child(2)::after,
+      &:nth-child(2)::before{
+        display: none;
+      }
+    }
     &__num{
       justify-content: space-around;
     }
@@ -258,8 +263,12 @@
       margin-top: 30px;
     }
   }
+  .products-tabs,
+  .design-tabs{
+    margin-bottom: 50px;
+  }
   .design{
-    padding: 50px 0;
+    padding: 70px 0;
     &__items{
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 30px;
@@ -370,7 +379,7 @@
     }
   }
   .top-slider{
-    padding-top: 90px;
+    padding: 90px 0 50px;
     &__item{
       .top-slider__img{
         display: none;
@@ -390,7 +399,7 @@
   }
   .products-tabs,
   .design-tabs{
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   .products-item{
     padding: 15px 10px;
@@ -403,7 +412,7 @@
       display: block;
     }
     &__item{
-      padding: 30px 15px;
+      padding: 40px 15px;
       margin-bottom: 20px;
     }
     &__content{
@@ -506,7 +515,7 @@
     display: block;
   }
   .video-popup{
-    padding: 65px 0;
+    padding: 70px 0;
   }
   .blog{
     &__items{
@@ -518,7 +527,7 @@
     }
   }
   .terms-conditions{
-    padding: 60px 0 35px;
+    padding: 70px 0 40px;
     &__title{
       line-height: 28px;
     }
@@ -527,43 +536,6 @@
     }
     &__list-item + .terms-conditions__list-item{
       margin-top: 15px;
-    }
-  }
-  .blog-page{
-    padding: 60px 0;
-    &__inner{
-      padding-bottom: 0;
-    }
-    &__item{
-      margin-bottom: 30px;
-    }
-    &__item-box{
-      padding-top: 25px;
-    }
-    &__item-title{
-      margin-bottom: 20px;
-      font-size: 28px;
-      line-height: 32px;
-    }
-    &__item-text{
-      margin-bottom: 20px;
-    }
-    &__info{
-      padding: 10px 15px;
-    }
-    &__img{
-      height: 285px;
-    }
-    &__item-btn{
-      padding: 15px 80px 15px 16px;
-      &::before{
-        top: 23px;
-      }
-    }
-  }
-  .filter{
-    &__item{
-      margin-bottom: 25px;
     }
   }
   .blog-one{
@@ -713,6 +685,37 @@
     padding-top: 70px;
     margin-bottom: 70px;
   }
+  .blog-page{
+    padding: 70px 0;
+    &__inner{
+      padding-bottom: 0;
+    }
+    &__item{
+      margin-bottom: 30px;
+    }
+    &__item-box{
+      padding-top: 30px;
+    }
+    &__item-title{
+      margin-bottom: 20px;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    &__item-text{
+      margin-bottom: 20px;
+    }
+    &__info{
+      padding: 15px;
+    }
+    &__img{
+      height: 285px;
+    }
+  }
+  .filter{
+    &__item{
+      margin-bottom: 30px;
+    }
+  }
   .blog-one{
     &__box{
       padding: 15px 0;
@@ -828,8 +831,13 @@
   }
 }
 
-@media (max-width: 360px){
+@media (max-width: 365px){
   .user-nav{
+    &__box{
+      &::after{
+        left: 65px;
+      }
+    }
     &__box-link{
       margin: 0 18px;
     }
